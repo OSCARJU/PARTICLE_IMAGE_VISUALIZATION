@@ -1,0 +1,44 @@
+vid = videoinput('hamamatsu', 1, 'MONO8_BIN2x2_1024x1024_FastMode');
+src = getselectedsource(vid);
+
+vid.FramesPerTrigger = 1;
+
+
+vid = videoinput('hamamatsu', 1, 'MONO8_2048x2048_FastMode');
+src = getselectedsource(vid);
+
+vid.FramesPerTrigger = 1;
+
+vid.FramesPerTrigger = 100;
+
+src.ExposureTime = 0.0019977;
+
+src.ImageHeight = 2047;
+
+src.ImageHeight = 2048;
+
+src.ImageWidth = 2047;
+
+src.ImageWidth = 2048;
+
+vid.ROIPosition = [0 0 2048 2048];
+
+vid.ROIPosition = [0 0 2047 2048];
+
+vid.ROIPosition = [0 0 2048 2048];
+
+vid.ROIPosition = [1 0 2047 2048];
+
+vid.ROIPosition = [0 0 2047 2048];
+
+vid.ROIPosition = [0 0 2048 2048];
+
+preview(vid);
+
+src.ExposureTime = 0.0099977;
+
+stoppreview(vid);
+
+
+
+////////////////////////////
